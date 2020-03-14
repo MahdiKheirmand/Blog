@@ -6,7 +6,7 @@
 <br/>Note: complte application.properties and run BlogNewsApplication
 <br/>
 <br/>
-<br/>Including:
+<br/>**Including:**
 <br/>   Controller & Service Layer
 <br/>   OneToMany-ManyToMany
 <br/>   Thymeleaf
@@ -18,7 +18,7 @@
 <br/>
 <br/>
 <br/>
-<br/>Coming Soon:
+<br/>**Coming Soon:**
 <br/>   Blog Page, Users Page, Category Page
 <br/>   error Handling & Mail Sender
 <br/>   Likes, Comments
