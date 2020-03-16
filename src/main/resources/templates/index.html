@@ -12,8 +12,8 @@
 
 <div class="container-fluid mt-3 pl-5 pr-5" style="background-color: gray">
 
-    <a class="text-dark" href="#" th:each="blog : ${blogs}">
-        <div class="card mr-3 mb-4" style="width: 17rem; float: left; ">
+    <a class="text-dark" th:href="@{/blogs/{id}(id=${blog.getId()})}" th:each="blog : ${blogs}">
+        <div class="card mr-3 mb-4" style="width: 17rem; float: left; " >
             <img alt="Card image cap" class="card-img-top border-bottom border-secondary"
                  style="width: 16.8rem; height: 16rem; object-fit: contain; margin: auto;"
                  th:src="'/img/' + ${blog.getCover()}">

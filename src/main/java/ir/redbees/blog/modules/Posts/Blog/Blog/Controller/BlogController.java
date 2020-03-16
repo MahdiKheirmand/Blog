@@ -69,10 +69,10 @@ public class BlogController {
         return "blogs/blogs";
     }
 
-    @GetMapping("/search")
-    public @ResponseBody
-    Page<Blog> search(@ModelAttribute Blog blog,Pageable pageable){
-        return blogService.findBySearch(blog,pageable);
+    @GetMapping("/{id}")
+    public String showBlog(Model model,@PathVariable long id){
+        model.addAttribute("blog",blogService.getBlog(id));
+        return "blogs/blog";
     }
 
     /*@GetMapping({"","/"})
@@ -93,7 +93,6 @@ public class BlogController {
     //REST
     //ENTITY
     @PostMapping("/rest")
-    @ResponseStatus(HttpStatus.CREATED)
     public @ResponseBody
     Blog registerBlogRest(@ModelAttribute BlogRegisterDTO dto) throws IOException {
         return blogService.registerBlogDTO(dto);
@@ -117,6 +116,12 @@ public class BlogController {
     @GetMapping("/rest/search")
     public @ResponseBody List<Blog> searchRest(@ModelAttribute Blog blog){
         return blogService.findBySearchRest(blog);
+    }
+
+    @GetMapping("/search")
+    public @ResponseBody
+    Page<Blog> search(@ModelAttribute Blog blog,Pageable pageable){
+        return blogService.findBySearch(blog,pageable);
     }
 
 
