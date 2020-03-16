@@ -15,13 +15,15 @@
 <br/>   Authorization & Authentication
 <br/>   CRUD
 <br/>   Validation
+<br/>   Blog Page
 <br/>
 <br/>
 <br/>
 <br/>**Coming Soon:**
-<br/>   Blog Page, Users Page, Category Page
+<br/>   Users Page, Category Page
 <br/>   error Handling & Mail Sender
 <br/>   Likes, Comments
+<br/>   Search
 <br/>   More
 
 
